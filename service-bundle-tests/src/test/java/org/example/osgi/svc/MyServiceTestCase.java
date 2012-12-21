@@ -14,6 +14,7 @@
 package org.example.osgi.svc;
 
 import javax.inject.Inject;
+
 import org.example.osgi.api.MyService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,28 +25,27 @@ import org.ops4j.pax.exam.junit.Configuration;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
- 
+
 @RunWith(JUnit4TestRunner.class)
 public class MyServiceTestCase {
- 
-	@Inject
-	private BundleContext ctx;
- 
+
+    @Inject
+    private BundleContext ctx;
+
     @Configuration
     public Option[] config() {
         return CoreOptions.options(
-    		CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "api-bundle"),
-    		CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "service-bundle"),
-            CoreOptions.junitBundles()
-            );
+                CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "api-bundle"),
+                CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "service-bundle"),
+                CoreOptions.junitBundles());
     }
- 
+
     @Test
     public void getHelloService() {
-    	ServiceReference ref = ctx.getServiceReference(MyService.class.getName());
-		MyService svc = (MyService) ctx.getService(ref);
-		
-		Assert.assertEquals("This service implementation should reverse the input",
-				"4321", svc.doSomething("1234"));
+        ServiceReference ref = ctx.getServiceReference(MyService.class.getName());
+        MyService svc = (MyService) ctx.getService(ref);
+
+        Assert.assertEquals("This service implementation should reverse the input",
+                "4321", svc.doSomething("1234"));
     }
 }
