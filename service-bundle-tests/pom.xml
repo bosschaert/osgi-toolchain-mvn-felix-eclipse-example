@@ -34,44 +34,8 @@
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
- 
- 
-    <!-- Pax Exam Dependencies -->
-        <dependency>
-            <groupId>org.ops4j.pax.exam</groupId>
-            <artifactId>pax-exam-container-native</artifactId>
-            <version>${paxexamversion}</version>
-            <scope>test</scope>
-        </dependency>
- 
-        <dependency>
-            <groupId>org.ops4j.pax.exam</groupId>
-            <artifactId>pax-exam-junit4</artifactId>
-            <version>${paxexamversion}</version>
-            <scope>test</scope>
-        </dependency>
- 
-        <dependency>
-            <groupId>org.ops4j.pax.exam</groupId>
-            <artifactId>pax-exam-link-mvn</artifactId>
-            <version>${paxexamversion}</version>
-            <scope>test</scope>
-        </dependency>
- 
-        <dependency>
-            <groupId>org.ops4j.pax.url</groupId>
-            <artifactId>pax-url-aether</artifactId>
-            <version>${paxurlversion}</version>
-            <scope>test</scope>
-        </dependency>
-    <!-- 
-    <dependency>
-      <groupId>org.ops4j.pax.exam</groupId>
-      <artifactId>pax-exam-spi</artifactId>
-      <version>${paxexamversion}</version>
-      <scope>test</scope>
-    </dependency>
 
+    <!-- Pax Exam Dependencies -->
     <dependency>
       <groupId>org.ops4j.pax.exam</groupId>
       <artifactId>pax-exam-container-native</artifactId>
@@ -81,7 +45,14 @@
 
     <dependency>
       <groupId>org.ops4j.pax.exam</groupId>
-      <artifactId>pax-exam-link-assembly</artifactId>
+      <artifactId>pax-exam-junit4</artifactId>
+      <version>${paxexamversion}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ops4j.pax.exam</groupId>
+      <artifactId>pax-exam-link-mvn</artifactId>
       <version>${paxexamversion}</version>
       <scope>test</scope>
     </dependency>
@@ -92,9 +63,7 @@
       <version>${paxurlversion}</version>
       <scope>test</scope>
     </dependency>
- -->
 
-    <!-- OSGi R4 frameworks -->
     <dependency>
       <groupId>org.apache.felix</groupId>
       <artifactId>org.apache.felix.framework</artifactId>

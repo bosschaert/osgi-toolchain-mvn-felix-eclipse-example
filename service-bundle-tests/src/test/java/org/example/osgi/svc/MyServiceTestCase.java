@@ -26,14 +26,13 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
  
 @RunWith(JUnit4TestRunner.class)
-public class SampleTest {
+public class MyServiceTestCase {
  
 	@Inject
 	private BundleContext ctx;
  
     @Configuration
     public Option[] config() {
- 
         return CoreOptions.options(
     		CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "api-bundle"),
     		CoreOptions.mavenBundle("org.example.osgi.mvn-felix-eclipse", "service-bundle"),
