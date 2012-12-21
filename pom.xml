@@ -51,6 +51,7 @@
   <modules>
     <module>api-bundle</module>
     <module>service-bundle</module>
+    <module>service-bundle-tests</module>
     <module>consumer-bundle</module>
   </modules>
 </project>
